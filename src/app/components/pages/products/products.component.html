@@ -1,0 +1,13 @@
+<div class="products container">
+  <h3 class="text-center my-5"> Наши чайные коллекции </h3>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-4">
+    <div class="" *ngFor="let products of products">
+      <img src="{{products.image}}" alt="image1" class="card shadow-sm product-card">
+      <div class="card-title">{{products.title}}</div>
+      <div class="card-text mb-4 card-descript">
+        {{products.description}}
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg" [routerLink]="['/products',products.id]">Подробнее</button>
+    </div>
+  </div>
+</div>

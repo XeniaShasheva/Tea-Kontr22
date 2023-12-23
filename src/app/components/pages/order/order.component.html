@@ -1,0 +1,119 @@
+<div class="order mt-4 mb-5" *ngIf="!orderTrue">
+  <h3 class="text-center p-5">Сделать заказ</h3>
+  <form class="row g-3 w-50 mx-auto pb-4" [formGroup]="this.checkoutForm"
+        (ngSubmit)="sendForm()">
+    <div class="col-sm-12">
+      <label for="inputProduct" class="form-label">Название товара</label>
+      <input type="text"
+             class="form-control" id="inputProduct" [value]="title" disabled>
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputName" class="form-label">Имя</label>
+      <input type="text" class="form-control" id="inputName"
+             formControlName="name">
+      <div *ngIf="checkoutForm.get('name')?.invalid &&
+                (checkoutForm.get('name')?.touched||checkoutForm.get('name')?.dirty)" >
+        <div class="error"  *ngIf="checkoutForm.get('name')?.errors?.['required']" >
+          Заполните имя!
+        </div>
+        <div class="error"   *ngIf="checkoutForm.get('name')?.errors?.['pattern']" >
+          Имя должно содержать только русские и английские буквы!
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputLastName" class="form-label">Фамилия</label>
+      <input type="text" class="form-control" id="inputLastName"
+             formControlName="last_name">
+      <div *ngIf="checkoutForm.get('last_name')?.invalid &&
+                 (checkoutForm.get('last_name')?.touched||checkoutForm.get('last_name')?.dirty)" >
+        <div class="error"   *ngIf="checkoutForm.get('last_name')?.errors?.['required']"  >
+          Заполните фамилию!
+        </div>
+        <div class="error"  *ngIf="checkoutForm.get('last_name')?.errors?.['pattern']"  >
+          Фамилия должна содержать только русские и английские буквы!
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <label for="inputPhone" class="form-label">Телефон</label>
+      <input type="text" class="form-control" id="inputPhone"
+             formControlName="phone">
+      <div *ngIf="checkoutForm.get('phone')?.invalid &&
+                 (checkoutForm.get('phone')?.touched||checkoutForm.get('phone')?.dirty)" >
+        <div class="error" *ngIf="checkoutForm.get('phone')?.errors?.['required']" >
+          Заполните номер телефона!
+        </div>
+        <div class="error"  *ngIf="checkoutForm.get('phone')?.errors?.['pattern']" >
+          Номер должен содержать 11 цифр!
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-6">
+      <label for="inputState" class="form-label">Страна</label>
+      <input type="text" class="form-control" id="inputState"
+             formControlName="country">
+      <div *ngIf="checkoutForm.get('country')?.invalid &&
+                (checkoutForm.get('country')?.touched||checkoutForm.get('country')?.dirty) &&
+                checkoutForm.get('country')?.errors?.['required']" class="error">
+        Заполните страну!
+      </div>
+    </div>
+
+
+    <div class="col-md-6">
+      <label for="inputIndex" class="form-label">Индекс</label>
+      <input type="text" class="form-control" id="inputIndex"
+             formControlName="zip">
+      <div *ngIf="checkoutForm.get('zip')?.invalid &&
+                (checkoutForm.get('zip')?.touched||checkoutForm.get('zip')?.dirty)" >
+        <div class="error" *ngIf="checkoutForm.get('zip')?.errors?.['required']">
+          Заполните индекс!
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-12">
+      <label for="inputAddress" class="form-label">Адрес</label>
+      <input type="text" class="form-control" id="inputAddress"
+             formControlName="address">
+      <div *ngIf="checkoutForm.get('address')?.invalid &&
+                (checkoutForm.get('address')?.touched||checkoutForm.get('address')?.dirty)" >
+        <div class="error"  *ngIf="checkoutForm.get('address')?.errors?.['required']" >
+          Заполните адрес!
+        </div>
+        <div class="error"  *ngIf="checkoutForm.get('address')?.errors?.['pattern']" >
+          В поле «Адрес» можно вводить: буквы, цифры, пробелы, дефис и слеш, все остальное запрещено!
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+      <label for="inputComment" class="form-label">Комментарий к заказу</label>
+      <input
+        formControlName="comment"
+        type="text" class="form-control" id="inputComment">
+    </div>
+
+
+    <div>
+      <button class="btn btn-primary btn-lg col-md-4" id="btnForm" [disabled]="checkoutForm.invalid || checkoutForm.disabled">Отправить</button>
+    </div>
+    <div *ngIf="orderFalse" class="error">Произошла ошибка. Попробуйте еще раз! </div>
+  </form>
+
+
+</div>
+
+
+<div class="order-open container" *ngIf="orderTrue">
+  <h3 class="m-0 text-center">Спасибо за заказ!</h3>
+  <img src="../../../../assets/images/2.png" alt="2">
+</div>

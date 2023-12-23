@@ -1,0 +1,143 @@
+.order{
+  padding: 24px 0 48px 0;
+
+}
+label{
+  color: #000000;
+}
+.form-label{
+  margin-bottom: 10px;
+}
+.order form button{
+  padding: 6px 37px;
+}
+
+
+.main{
+  padding: 72px 0 36px 0;
+}
+
+ul.slick-dots{
+  display: none !important;
+}
+
+
+img{
+  width: 100%;
+  display: block;
+}
+.img_card{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+.activ-arrow{
+  transform: rotate(180deg);
+}
+.btn-product{
+  margin: 0 auto;
+}
+
+.slick-prev{
+  left: 41px;
+  z-index: 100;
+}
+.slick-next{
+  right: 64px;
+}
+.slick-prev:before, .slick-next:before{
+  font-size: 40px;
+  color: #000000;
+}
+.single-item button{
+  display: none !important;
+}
+
+
+.question{
+  padding: 36px 0 32px 0;
+  position: relative;
+}
+.product-card{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.card-descript{
+  flex: 1 1 auto;
+}
+.question .container{
+  max-width: 856px;
+}
+
+h3 > .ui-accordion-header-icon{
+  display: none;
+}
+.question h5{
+  background: linear-gradient(360deg, #076BFF 0%, #007BFF 100%);
+  border-radius: 10px;
+}
+h5{
+  position: relative;
+}
+.arrows{
+  position: absolute;
+  top: 26px;
+  right: 24px;
+  transition: all .5s ease;
+}
+.arrows.active::after{
+  transform:rotate(180deg);
+}
+
+.products{
+  padding: 36px 0;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products h1{
+  margin-bottom: 51px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.card-body{
+  padding: 20px;
+}
+.card-title{
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.col button{
+  background-color: #076BFF;
+  padding: 0 42px;
+  width: 172px;
+}
+.own-product{
+  margin: 0 auto;
+}
+
+.error{
+  color: red;
+}
+
+
+.question{
+  padding: 36px 0 32px 0;
+  position: relative;
+}
+.product-card{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.card-descript{
+  flex: 1 1 auto;
+}

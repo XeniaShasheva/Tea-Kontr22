@@ -1,0 +1,14 @@
+<section class="products container product">
+<div class="product container">
+  <div class="row product">
+    <div class="col-4 text-center overflow-hidden">
+      <img src="{{product.image}}" alt="image1" class="card shadow-sm product-card">
+      <div class="card-title text-center">{{product.title}}</div>
+      <div class="card-text mb-4 card-descript text-center">
+        {{product.description}}
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg" [routerLink]="['/order',product.title]">Купить</button>
+    </div>
+  </div>
+</div>
+</section>

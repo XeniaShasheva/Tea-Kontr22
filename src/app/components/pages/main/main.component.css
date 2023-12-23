@@ -1,0 +1,17 @@
+.popup {
+  width: 400px;
+  height: 200px;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  background: rgba(255, 255, 255, 0.44);
+  color: black;
+  text-align: center;
+  padding-top: 50px;
+  border-radius: 10px;
+  border: 1px solid blue;
+}
+
+.popup-btn {
+  margin-top: 40px;
+}

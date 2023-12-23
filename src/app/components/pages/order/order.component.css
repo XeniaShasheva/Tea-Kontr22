@@ -1,0 +1,13 @@
+.order-open h3{
+  padding: 170px 0;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0 auto;
+}
+.order-open {
+  height: 100%;
+}
+
+.order-open img {
+  margin-bottom: 50px;
+}
