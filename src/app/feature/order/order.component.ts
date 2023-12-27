@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
-import {ProductService} from "../../../services/product.service";
 import {ActivatedRoute} from "@angular/router";
-import {OrderType} from "../../../../types/order.types";
+import {ProductService} from "../../shared/services/product.service";
+import {OrderType} from "../../../types/order.types";
+
 
 @Component({
   selector: 'app-order',

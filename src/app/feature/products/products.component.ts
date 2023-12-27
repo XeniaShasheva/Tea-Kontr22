@@ -1,9 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ProductType} from "../../../../types/product.types";
-import {ActivatedRoute, Router} from "@angular/router";
-import {ProductService} from "../../../services/product.service";
-import {Observable, tap} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import {Component, OnInit} from '@angular/core';
+import {ProductType} from "../../../types/product.types";
+import {ProductService} from "../../shared/services/product.service";
 
 @Component({
   selector: 'app-products',
